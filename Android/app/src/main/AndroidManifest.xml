@@ -12,6 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android">
         <activity
+            android:name=".views.FavouriteScreen"
+            android:exported="false"
+            android:label="@string/title_activity_favourite_screen"
+            android:theme="@style/Theme.Android" />
+        <activity
+            android:name=".views.CarDetailScreen"
+            android:exported="false"
+            android:label="@string/title_activity_car_detail_screen"
+            android:theme="@style/Theme.Android" />
+        <activity
+            android:name=".views.InventoryItem"
+            android:exported="false"
+            android:label="@string/title_activity_inventory_item"
+            android:theme="@style/Theme.Android" />
+        <activity
+            android:name=".views.InventoryScreen"
+            android:exported="false"
+            android:label="@string/title_activity_inventory_screen"
+            android:theme="@style/Theme.Android" />
+        <activity
+            android:name=".views.HomeScreen"
+            android:exported="false"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/Theme.Android" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

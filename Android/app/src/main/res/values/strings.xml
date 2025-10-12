@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Android</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_activity_inventory_screen">InventoryScreen</string>
+    <string name="title_activity_inventory_item">InventoryItem</string>
+    <string name="title_activity_car_detail_screen">CarDetailScreen</string>
+    <string name="title_activity_favourite_screen">FavouriteScreen</string>
 </resources>
