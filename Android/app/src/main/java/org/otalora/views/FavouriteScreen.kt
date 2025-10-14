@@ -7,9 +7,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import org.otalora.utils.NavigationState
 import org.otalora.views.ui.theme.AndroidTheme
 
 class FavouriteScreen : ComponentActivity() {
@@ -27,8 +32,14 @@ class FavouriteScreen : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FavouriteScreenContent() {
+    var selectedScreen = NavigationState.selectedScreen;
+
     Scaffold(
-        topBar = { TopAppBar(title = { Text("Favoritos") }) }
+        topBar = { TopAppBar(title = { Text("Favoritos") })
+        },
+        bottomBar = {
+            BottomNavigationBar(selectedScreen) { selectedScreen = it }
+        }
     ) { innerPadding ->
         Box(
             modifier = Modifier

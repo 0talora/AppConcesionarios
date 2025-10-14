@@ -5,4 +5,5 @@
     <string name="title_activity_inventory_item">InventoryItem</string>
     <string name="title_activity_car_detail_screen">CarDetailScreen</string>
     <string name="title_activity_favourite_screen">FavouriteScreen</string>
+    <string name="title_activity_components">Components</string>
 </resources>
