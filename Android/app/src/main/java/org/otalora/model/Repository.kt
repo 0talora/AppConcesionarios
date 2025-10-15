@@ -16,4 +16,16 @@ object Repository {
             emptyList()
         }
     }
+
+    suspend fun getDealerShips():List<DealerShip>{
+        return try {
+            val dealerShips = api.getDealerShips()
+            Log.d("API_TEST", "Se recibieron ${dealerShips.size} concesionarios desde la API")
+            dealerShips
+        } catch (e: Exception){
+            Log.e("API_TEST", "Error al obtener concesionaros: ${e.message}", e)
+            emptyList()
+        }
+    }
+
 }

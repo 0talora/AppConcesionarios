@@ -31,12 +31,6 @@ fun BottomNavigationBar(selected: String, onSelect: (String) -> Unit) {
             label = { Text("Coches") }
         )
         NavigationBarItem(
-            selected = selected == "concesionarios",
-            onClick = { onSelect("concesionarios") },
-            icon = { Icon(Icons.Default.List, contentDescription = "Concesionarios") },
-            label = { Text("Concesionarios") }
-        )
-        NavigationBarItem(
             selected = selected == "favoritos",
             onClick = { onSelect("favoritos") },
             icon = { Icon(Icons.Default.Favorite, contentDescription = "Favoritos") },
