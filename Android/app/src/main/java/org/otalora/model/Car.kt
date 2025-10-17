@@ -12,5 +12,6 @@ data class Car(
     val matricula: String,
     val paisOrigen: String,
     val precioVenta: Double,
-    val concesionario: DealerShip
+    val concesionario: DealerShip,
+    val fotos: List<CarPhoto> = emptyList()
 )
