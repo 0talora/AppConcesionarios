@@ -13,21 +13,31 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun CarImage(base64String: String) {
+fun CarImage(
+    base64String: String,
+    modifier: Modifier = Modifier
+) {
     val bitmap = try {
         if (base64String.isNotEmpty()) {
-            val imageBytes = Base64.decode(base64String, Base64.DEFAULT)
-            BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+            val imageBytes = android.util.Base64.decode(base64String, android.util.Base64.DEFAULT)
+            android.graphics.BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
         } else null
     } catch (e: Exception) {
         null
     }
 
     if (bitmap != null) {
-        Image(bitmap = bitmap.asImageBitmap(), contentDescription = null, modifier = Modifier.size(120.dp))
+        Image(
+            bitmap = bitmap.asImageBitmap(),
+            contentDescription = null,
+            modifier = modifier
+        )
     } else {
-        Box(modifier = Modifier.size(120.dp), contentAlignment = Alignment.Center) {
-            Text(text="No imagen")
+        Box(
+            modifier = modifier,
+            contentAlignment = Alignment.Center
+        ) {
+            Text(text = "No imagen")
         }
     }
 }
